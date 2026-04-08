@@ -109,6 +109,10 @@
 ### Amazon EventBridge
 #### Overview
 #### Core Features
+- Triggers (https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
+- Messaging https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html
+- Eventing (https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
+
 #### Integration Options
 #### Monitoring & Observability
 #### Pricing Model
@@ -117,6 +121,7 @@
 ### Cloud IoT Core
 #### Overview
 #### Core Features
+- Messaging (https://cloud.google.com/blog/topics/developers-practitioners/what-cloud-iot-core)
 #### Integration Options
 #### Monitoring & Observability
 #### Pricing Model
@@ -174,5 +179,3 @@ Integration Options – how it works with other cloud services or CI/CD pipeline
 Monitoring & Observability – available tools/logging integrations
 Pricing Model – high-level cost considerations
 Strengths & Weaknesses – from a serverless architecture perspective
-
-## References
