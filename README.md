@@ -97,6 +97,10 @@
 ### Azure Event Grid
 #### Overview
 #### Core Features
+- Triggers (https://learn.microsoft.com/en-us/azure/event-grid/overview)
+- Bindings (https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-grid-trigger?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cextensionv3&pivots=programming-language-python)
+- Messaging (https://learn.microsoft.com/en-us/azure/event-grid/overview)
+- Eventing (https://learn.microsoft.com/en-us/azure/event-grid/overview)
 #### Integration Options
 #### Monitoring & Observability
 #### Pricing Model
@@ -124,7 +128,14 @@
 #### Overview
 This is a fully managed, real-time data streaming platform that can ingest millions of events per second with low latency to build data pipelines for IoT telemetry, application logging, clickstream analytics, financial transaction processing, and other scenarios that require high-throughput, reliable event ingestion.
 #### Core Features
+- Triggers (https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-hubs-trigger?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cfunctionsv2%2Cextensionv5&pivots=programming-language-python)
+- Binding (https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-hubs-trigger?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cfunctionsv2%2Cextensionv5&pivots=programming-language-python)
+- Messaging (https://learn.microsoft.com/en-ca/azure/event-hubs/event-hubs-about)
+- Eventing (https://learn.microsoft.com/en-ca/azure/event-hubs/event-hubs-about)
+
 #### Integration Options
+
+
 #### Monitoring & Observability
 #### Pricing Model
 #### Strengths & Weaknesses
@@ -133,11 +144,8 @@ This is a fully managed, real-time data streaming platform that can ingest milli
 #### Overview
 Amazon's service for managing real-time data streams to collect streaming data such as IoT device data with low latency, providing insights in minutes.
 #### Core Features
-##### Trigger:
-- Acts as a trigger for Lambda (https://docs.aws.amazon.com/lambda/latest/dg/services-kinesis-create.html)
-##### Binding:
-- Lambda functions can be mapped to processes (https://docs.aws.amazon.com/lambda/latest/dg/services-kinesis-create.html)
-##### Messaging/Eventing
+- Supported triggers (https://docs.aws.amazon.com/lambda/latest/dg/services-kinesis-create.html)
+- Bindings, since functions can be mapped to processes (https://docs.aws.amazon.com/lambda/latest/dg/services-kinesis-create.html)
 - Messaging through Kinesis Data Streams (https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
 
 #### Integration Options
@@ -149,9 +157,10 @@ Amazon's service for managing real-time data streams to collect streaming data s
 ### Google Cloud Pub/Sub
 
 #### Overview
+
 #### Core Features
 - Triggers (https://docs.cloud.google.com/pubsub/docs/pubsub-basics)
-- Binding when 
+- Binding isn't followed directly, but is subscriptions and delivery types can connect Pub/Sub to consumers or other services (https://docs.cloud.google.com/pubsub/docs/pubsub-basics)
 - Messaging/Eventing (https://docs.cloud.google.com/pubsub/docs/pubsub-basics)
 
 #### Integration Options
