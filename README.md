@@ -154,6 +154,16 @@ Amazon's service for managing real-time data streams to collect streaming data s
 - Messaging through Kinesis Data Streams (https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
 
 #### Integration Options
+##### Native
+- AWS Lambda
+- Amazon Redshift
+- Cloud functions
+(https://www.cloudoptimo.com/blog/getting-started-with-amazon-kinesis-for-real-time-data/)
+##### Third-party
+- Kafka Connector
+- Apache Flink
+- Debezium
+(https://docs.aws.amazon.com/streams/latest/dev/using-other-services-third-party.html)
 
 #### Monitoring & Observability
 #### Pricing Model
@@ -166,9 +176,20 @@ Amazon's service for managing real-time data streams to collect streaming data s
 #### Core Features
 - Triggers (https://docs.cloud.google.com/pubsub/docs/pubsub-basics)
 - Binding isn't followed directly, but is subscriptions and delivery types can connect Pub/Sub to consumers or other services (https://docs.cloud.google.com/pubsub/docs/pubsub-basics)
-- Messaging/Eventing (https://docs.cloud.google.com/pubsub/docs/pubsub-basics)
+- Messaging (https://docs.cloud.google.com/pubsub/docs/pubsub-basics)
+- Eventing (https://docs.cloud.google.com/solutions/event-driven-architecture-pubsub)
 
 #### Integration Options
+##### Native 
+- Dataflow
+- BigQuery
+- Cloud functions
+(https://cloud.google.com/pubsub/integrations)
+##### Third-party
+- Apache Kafka Connector
+- Datadog
+- Grafana
+(https://cloud.google.com/pubsub/integrations)
 #### Monitoring & Observability
 #### Pricing Model
 #### Strengths & Weaknesses
