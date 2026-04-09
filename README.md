@@ -140,6 +140,16 @@ This is a fully managed, real-time data streaming platform that can ingest milli
 
 #### Integration Options
 
+##### Native
+- Azure Stream Analytics
+- Azure Data Explorer
+- Azure Function Apps
+(https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about)
+
+##### Third-party
+- Apache Kafka (https://azure.microsoft.com/en-us/products/event-hubs/)
+- Apache Spark (https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-kafka-spark-tutorial)
+- Apache Kafka (https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-kafka-connect-tutorial)
 
 #### Monitoring & Observability
 #### Pricing Model
@@ -157,7 +167,7 @@ Amazon's service for managing real-time data streams to collect streaming data s
 ##### Native
 - AWS Lambda
 - Amazon Redshift
-- Cloud functions
+- Amazon CloudWatch
 (https://www.cloudoptimo.com/blog/getting-started-with-amazon-kinesis-for-real-time-data/)
 ##### Third-party
 - Kafka Connector
