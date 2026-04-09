@@ -152,16 +152,34 @@ This is a fully managed, real-time data streaming platform that can ingest milli
 - Apache Kafka (https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-kafka-connect-tutorial)
 
 #### Monitoring & Observability
+- Azure Monitor (https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about)
+
 #### Pricing Model
+- Pricing models providing
+- Price per hour
+- Price per million events
+- Storage space
+- Renention period
+(https://azure.microsoft.com/en-us/pricing/details/event-hubs/)
+
 #### Strengths & Weaknesses
+##### Strengths
+- Iot devices
+- Application monitoring
+- https://www.codestudy.net/blog/kafka-vs-kinesis-vs-event-hub/
+
+##### Weaknesses
+- Less flexibility in pricing options than Kinesis, and a less forgiving pricing model than Cloud Pub/Sub
+- Integration with other services should be improved (https://www.trustradius.com/products/azure-event-hubs/reviews?qs=pros-and-cons)
+
 
 ### Amazon Kinesis
 #### Overview
 Amazon's service for managing real-time data streams to collect streaming data such as IoT device data with low latency, providing insights in minutes.
 #### Core Features
 - Supported triggers (https://docs.aws.amazon.com/lambda/latest/dg/services-kinesis-create.html)
-- Bindings, since functions can be mapped to processes (https://docs.aws.amazon.com/lambda/latest/dg/services-kinesis-create.html)
-- Messaging through Kinesis Data Streams (https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
+- Messaging (https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
+- Eventing (https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html)
 
 #### Integration Options
 ##### Native
@@ -176,12 +194,30 @@ Amazon's service for managing real-time data streams to collect streaming data s
 (https://docs.aws.amazon.com/streams/latest/dev/using-other-services-third-party.html)
 
 #### Monitoring & Observability
+- CloudWatch (https://www.cloudoptimo.com/blog/getting-started-with-amazon-kinesis-for-real-time-data/)
+
 #### Pricing Model
+- Per stream
+- Per hour
+- Data stored
+(https://aws.amazon.com/kinesis/data-streams/pricing/)
 #### Strengths & Weaknesses
+##### Strengths
+-  "robust scalability and high data throughput, handling gigabytes within milliseconds."
+- "supports real-time data streaming and offers replay features, beneficial for business troubleshooting."
+-  "accessible to novice developers and offers significant flexibility for business applications."
+- (https://www.peerspot.com/products/amazon-kinesis-pros-and-cons)
+
+##### Weaknesses
+- "could improve its pricing to be more competitive, especially for large volumes."
+- "hard limits on Amazon Kinesis, and if users hit those, they will encounter a throughput exceed error."
+- "lacks first in, first out queuing"
+- (https://www.peerspot.com/products/amazon-kinesis-pros-and-cons)
 
 ### Google Cloud Pub/Sub
 
 #### Overview
+An asynchronous and scalable messaging service that decouples services producing messages from services processing those messages.
 
 #### Core Features
 - Triggers (https://docs.cloud.google.com/pubsub/docs/pubsub-basics)
@@ -201,8 +237,23 @@ Amazon's service for managing real-time data streams to collect streaming data s
 - Grafana
 (https://cloud.google.com/pubsub/integrations)
 #### Monitoring & Observability
+- Google Cloud Monitoring (https://cloud.google.com/pubsub/integrations)
+- Google Logging (https://cloud.google.com/pubsub/integrations)
 #### Pricing Model
+- Throughput costs for message publishing and delivery
+- Data transfer costs associated with throughput that crosses a Google Cloud zone or region boundary
+- Storage costs associated with retaining messages
+- Pay for what is used
+(https://cloud.google.com/pubsub/pricing)
+
 #### Strengths & Weaknesses
+##### Strengths
+- Pay-as-you-go model
+- Easy integration (https://www.g2.com/products/google-cloud-pub-sub/reviews?qs=pros-and-cons)
+##### Weaknesses
+- slow processing for messages over 10MB
+- issues with message duplication
+- (https://www.g2.com/products/google-cloud-pub-sub/reviews?qs=pros-and-cons)
 
 Overview – brief description of each service
 Core Features – supported triggers, bindings, messaging/eventing capabilities
