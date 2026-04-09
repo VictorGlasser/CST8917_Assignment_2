@@ -1,5 +1,31 @@
 # CST8917 - Assignment 2
 
+## Azure Event Grid
+
+| Category                   | Azure Event Grid                                                                 | Amazon EventBridge                                                                 | Cloud IoT Core                                                                 |
+|----------------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| **Overview**               | Azure Event Grid is a fully managed, publish-subscribe event routing service designed for near real-time delivery. | A serverless service that uses events to connect application components together, enabling scalable event-driven applications. | A fully managed service for securely connecting, managing, and ingesting data from globally distributed devices. |
+| **Core Features**          | Triggers, Bindings, Messaging, Eventing                                          | Triggers, Messaging, Eventing                                                        | Messaging                                                                      |
+| **Native Integrations**    | Azure Functions, Logic Apps, Event Hubs                                          | Lambda, Amazon SQS, Amazon SNS                                                      | Cloud Dataflow, Cloud Pub/Sub                                                  |
+| **Third-party Integrations** | Datadog, MongoDB                                                               | Datadog, MongoDB, Salesforce                                                        | Telegraf, Prometheus, Grafana                                                  |
+| **Monitoring & Observability** | Built-in monitoring                                                        | CloudWatch                                                                          | Cloud Logging                                                                  |
+| **Pricing Model**          | Price per unit per hour; No additional fees for MQTT operations until 1 million operations; Pay-per-use option | Cost per million events                                                             | Discontinued; Previously price per MB used                                     |
+| **Strengths**              | Low latency; Flexible pricing options (pay-as-you-go or time-based)              | High customization; Excellent documentation                                         | SDK support across platforms; Easy data integration with caching systems       |
+| **Weaknesses**             | Limited regional availability; More costly than some alternatives                | No event replay feature; Stability issues with triggering                           | Limited monitoring and dashboards; Occasional server instability; Discontinued |
+
+## Azure Event Hubs
+
+| Category                   | Azure Event Hubs                                                                 | Amazon Kinesis                                                                 | Google Cloud Pub/Sub                                                                 |
+|----------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| **Overview**               | A fully managed, real-time data streaming platform capable of ingesting millions of events per second with low latency for high-throughput data pipelines. | A service for managing real-time data streams, collecting streaming data such as IoT data with low latency and near real-time insights. | An asynchronous and scalable messaging service that decouples message producers from consumers. |
+| **Core Features**          | Triggers, Binding, Messaging, Eventing                                           | Triggers, Messaging, Eventing                                                   | Triggers, Subscription-based bindings, Messaging, Eventing                           |
+| **Native Integrations**    | Azure Stream Analytics, Azure Data Explorer, Azure Function Apps                 | AWS Lambda, Amazon Redshift, Amazon CloudWatch                                  | Dataflow, BigQuery, Cloud Functions                                                  |
+| **Third-party Integrations** | Apache Kafka, Apache Spark                                                     | Kafka Connector, Apache Flink, Debezium                                         | Apache Kafka Connector, Datadog, Grafana                                             |
+| **Monitoring & Observability** | Azure Monitor                                                             | CloudWatch                                                                      | Google Cloud Monitoring, Google Logging                                              |
+| **Pricing Model**          | Price per hour; Price per million events; Storage costs; Retention period costs  | Per stream; Per hour; Data storage costs                                         | Throughput-based costs; Data transfer costs; Storage costs; Pay-as-you-go            |
+| **Strengths**              | Strong for IoT devices and application monitoring                               | High scalability and throughput; Supports replay; Flexible and accessible       | Pay-as-you-go model; Easy integration                                                |
+| **Weaknesses**             | Less flexible pricing; Integration improvements needed                          | Pricing can be expensive at scale; Throughput limits; No FIFO queuing            | Slower processing for large messages; Potential message duplication issues           |
+
 ## Azure Functions
 ### Azure Functions 
 #### Overview
@@ -325,9 +351,3 @@ An asynchronous and scalable messaging service that decouples services producing
 - issues with message duplication
 - (https://www.g2.com/products/google-cloud-pub-sub/reviews?qs=pros-and-cons)
 
-Overview – brief description of each service
-Core Features – supported triggers, bindings, messaging/eventing capabilities
-Integration Options – how it works with other cloud services or CI/CD pipelines
-Monitoring & Observability – available tools/logging integrations
-Pricing Model – high-level cost considerations
-Strengths & Weaknesses – from a serverless architecture perspective
