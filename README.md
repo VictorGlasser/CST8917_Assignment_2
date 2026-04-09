@@ -96,36 +96,106 @@
 ## Azure Event Grid
 ### Azure Event Grid
 #### Overview
+"Azure Event Grid is a fully managed, publish-subscribe event routing service designed for near real-time delivery." (https://prashantbiztalkblogs.wordpress.com/2025/06/21/event-grid-vs-service-bus-vs-event-hubs-vs-storage-queues-choosing-the-right-messaging-backbone-in-azure/)
 #### Core Features
 - Triggers (https://learn.microsoft.com/en-us/azure/event-grid/overview)
 - Bindings (https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-grid-trigger?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cextensionv3&pivots=programming-language-python)
 - Messaging (https://learn.microsoft.com/en-us/azure/event-grid/overview)
 - Eventing (https://learn.microsoft.com/en-us/azure/event-grid/overview)
 #### Integration Options
+
+##### Native
+- Azure Functions
+- Logic Apps
+- Events Hubs
+- (https://medium.com/walmartglobaltech/azure-messaging-services-how-to-choose-the-right-messaging-technology-in-azure-eab610b5e986)
+##### Third-party
+- Datadog (https://docs.datadoghq.com/integrations/azure-eventgrid/)
+- MongoDB (https://www.mongodb.com/company/blog/technical/using-azure-event-hubs-with-connector-apache-kafka)
 #### Monitoring & Observability
+- Built-in monitoring (https://learn.microsoft.com/en-us/azure/event-grid/monitor-event-delivery)
 #### Pricing Model
+- Price per unit per hour
+- No additional fees for MQTT opperations until 1 million opperations
+- Pay-per-use option
+- (https://azure.microsoft.com/en-us/pricing/details/event-grid/)
+
 #### Strengths & Weaknesses
+##### Strengths
+- Low-latency (https://prashantbiztalkblogs.wordpress.com/2025/06/21/event-grid-vs-service-bus-vs-event-hubs-vs-storage-queues-choosing-the-right-messaging-backbone-in-azure/)
+- Felxible pricing options (pay-as-you-go or time-based)
+##### Weaknesses
+- Some regions are unable to supply resources, limiting its usefullness
+- More costly than alternatives such as Event Grid (https://azurelessons.com/azure-event-hub-vs-event-grid/)
 
 ### Amazon EventBridge
 #### Overview
+- a serverless service that uses events to connect application components together, making it easier to build scalable event-driven applications. (https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
 #### Core Features
 - Triggers (https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
 - Messaging https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html
 - Eventing (https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
-
 #### Integration Options
+##### Native
+- Lambda
+- Amazon SQS
+- Amazon SNS
+- (https://cyberpanel.net/blog/aws-eventbridge)
+##### Third-party
+- Datadog
+- MongoDB
+- Salesforce
+- (https://aws.amazon.com/eventbridge/integrations/)
 #### Monitoring & Observability
+- CloudWatch (https://cloudburn.io/blog/amazon-eventbridge-pricing)
 #### Pricing Model
+- Cost per million events (https://aws.amazon.com/eventbridge/pricing/)
 #### Strengths & Weaknesses
+##### Strengths
+- High level of customization and determining which services are dependent
+- Excellent documentation
+- (https://www.peerspot.com/products/amazon-eventbridge-pros-and-cons)
+
+##### Weaknesses
+- Doesn't have an event-replay feature
+- Poor stability, where it is not triggering when it should be.
+- (https://www.peerspot.com/products/amazon-eventbridge-pros-and-cons)
 
 ### Cloud IoT Core
 #### Overview
+- "Cloud IoT Core is a fully managed service that allows you to easily and securely connect, manage, and ingest data from millions of globally dispersed devices." (https://sourceforge.net/software/compare/Amazon-EventBridge-vs-Google-Cloud-IoT-Core/)
 #### Core Features
 - Messaging (https://cloud.google.com/blog/topics/developers-practitioners/what-cloud-iot-core)
 #### Integration Options
+##### Native
+- Cloud Dataflow (https://docs.cloud.google.com/architecture/connected-devices/iot-platform-product-architecture)
+- Cloud Pub/Sub (https://docs.cloud.google.com/architecture/connected-devices/iot-platform-product-architecture)
+##### Third-party
+- Telegraf
+- Prometheus
+- Grafana
+- (https://logit.io/docs/integrations/google-cloud-iot-core/)
 #### Monitoring & Observability
+- Cloud Logging (https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-cloudiot)
 #### Pricing Model
+- Discontinued
+- Price per MB used (https://www.scrums.com/cloud-hub/google-cloud-iot-core)
 #### Strengths & Weaknesses
+
+##### Strengths
+- SDK is available in all the mobile platform as well as web.
+- Can help send data to elastic cache very easily.
+- (https://www.trustradius.com/products/aws-iot-core/reviews?qs=pros-and-cons)
+
+##### Weakness
+- Monitoring and real-time dashboard features could be improved.
+- Sometimes the server hangs and is unable to send data to cloud services.
+- Discontinued
+- (https://www.trustradius.com/products/aws-iot-core/reviews?qs=pros-and-cons)
+
+
+
+
 
 
 ## Azure Event Hubs
